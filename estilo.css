@@ -1,0 +1,224 @@
+*{
+                    margin: 0; /*Margem*/
+                    padding: 0; /* Margem interna-espaço de dentro*/
+                    box-sizing: border-box; /* ocupa o espaço dele mesmo do box*/
+         
+                }
+                header{
+                    background-color: rgb(64, 73, 155);
+                    color: floralwhite;
+                }
+                
+                .menutop{
+                    display: flex; /* o que esta dentro do menutop*/
+                    justify-content: space-between; /* colocar um espaço entre os objetos*/
+                    align-items: center; /* alinhar os itens*/
+                    height:80px ; /* altura*/
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+                .site{
+                    width: 80%; /* largura*/
+                    margin: 0 10%; /* o espaço que sobrou do site*/
+                }
+                 
+                 /* Tudo da Nav para fazer o menu*/
+                nav{ height: 50px; background-color: rgb(230, 220, 207);} 
+                nav ul{
+                    display: flex;
+                    align-items: center;
+                    height: 50px;
+                    float: right; /* Ir para a esquerda,esta flutuando */
+                }
+         
+                 nav ul:last-child{ clear: both;} /* para de flutuar,so fique no menu*/   
+                 nav li{
+                    list-style-type: none;
+                    padding: 20px; /* espaçamento*/
+                }
+                 nav ul li:hover{ /* hover, passar o mouse sobre os itens*/
+                     background-color: rgb(161, 89, 228);
+                     color: aliceblue;
+                 }
+
+                 .sticky{
+                    position: sticky;
+                    top: 0;
+                    background-color: rgba(255,255,255,0.9) /* sigla = rgba, menu transparencia*/
+                    
+                 }
+         
+                  /* acaba a nav */
+         
+                /* GRIDS*/ 
+
+                .row:after{ /* a linha,para os componentes não ficarem flutuando*/
+                    content: "";
+                    display: table;
+                    clear: both;
+
+                }
+
+                .col1{
+                     width: 100%;
+                     padding: 20px; 
+                                    
+                }
+
+                .col2{
+                      width: 50%;
+                      padding: 20px; 
+                      float: left;             
+                }
+
+                .col3{
+                     width: 33.333333%;  
+                     padding: 20px;  
+                     float: left;           
+                }
+
+                .col4{
+                      width: 25%;
+                      padding: 20px;
+                      float: left;              
+                }
+                /* final de grids*/
+
+                /*CARDS*/
+                .card-flex{
+                   display: flex; /* card- flex  colocar divs na mesma coluna*/
+                }
+                .card30{
+                    min-width: 30%; /* no minimo 30%*/
+                    
+
+                }
+                .card70{
+                    min-width: 70%;
+                    
+                }
+
+                .card-borda{
+                    border: 1px solid rgba(190, 27, 117, 0.867); /* solid = traço reto*/
+                    border-left: 5px solid rgb(182, 19, 168);
+                    margin: 5px;
+                    border-radius: 5px; /* vai redondar a borda*/
+                    padding: 10px;
+
+
+                }
+
+                 /*CARDS FINAL*/
+
+                 .hot-flex{ display: flex;} /* flex colocar um do lado do outro*/
+
+                   .hot30{ min-width: 30%; } /* hot30(imagem no minimo 30%*/
+
+                     .hot70{min-width: 70%; margin: 10px; }
+
+                     .hot-borda{border: 1px solid rgb(219, 210, 210);}
+
+                    .hot-flex-reverso{display: flex; flex-direction: row-reverse;} /* quero que a linha seja reverso,todo o conteúdo*/
+
+                    .linha-unica-reveso{
+                        display: flex;
+                        flex-direction: row-reverse;
+                        align-items: center;
+                    
+                    }
+
+                    .linha-unica-reveso img{padding:  10px 3px; width: 26px;}
+                    .linha-unica-reveso p{margin-right: 15px;}
+
+                    
+
+                  /*APOIO*/   
+
+                .img-responsive{
+                    width: 100%;}
+
+                .text-center{
+                    text-align: center;}
+
+                .linha-unica{ display: flex; align-items: center;}
+
+                .linha-unica img{padding: 10px 3px; width:26px;} /* imagem estrela 10px por 3px*/
+
+                .linha-unica p{margin-left:10px ;} /* o texta sera a direita da imagem com 10px*/
+
+                /*footer*/
+                footer{
+                    margin-top: 45px;
+                    background-color: rgb(142, 177, 201);
+                    color: rgb(18, 18, 19);
+                }
+
+                    .footer{display: flex;padding: 30px 0 ;} /*tudo na horizontal ou tudo na vertical*/
+                    .footer30{width: 30%;}
+                    .footer40{width: 40%;}
+                    .footer h1{margin-bottom: 20px ;}
+                    .footer ul{list-style-type: none;}
+                    .footer li{padding-bottom: 5px 0;}
+
+                    .direitos{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 10vh;
+                        color: rgb(13, 13, 14);
+                        background-color:ivory;
+                    }
+
+                    
+                
+
+
+
+
+
+
+                /*fim footer*/
+
+                .btn{
+                    background-color: rgb(70, 119, 209);
+                    color: cornsilk;
+                    padding:10px 10px ; /* margem interna 20px em cima e em baixo e outro 20px esquerta e direita*/
+                    border:none ;
+                    border-radius: 3px; /* para redondar a borda*/
+                }
+
+                .text-direta { text-align: right;}
+                .espaco-vertical{margin: 20px 0 10px 0;}
+
+                .mover-div{margin-top: -70px; z-index: 1; position: relative;} /* subrepor a imagem de cima,margin-top = quantidade de px vai reduzir*/
+
+                .agente-center{display: flex; flex-direction: column; align-items: center;} /* flex-direction = direcionar por coluna*/
+
+                
+                @media screen and (max-width: 1000px;){
+                    .col4{width: 50px;} /*@media que controla a revolução da tela*/
+                    .card-flex{ flex-wrap: wrap; justify-content: center;}
+                    .mover-div{margin-top: 0;}
+                    
+                }
+
+                @media screen and (max-width:800px){
+                    .col4{width: 100px;}
+
+                    .footer{display:flex; flex-direction: column;}
+                    .footer30{width: 100px; text-align: center;padding-bottom: 50px;}
+                    .footer40{width: 100px; text-align: center; padding-bottom: 50px;}
+                    
+                }
+
+                @media screen and (max-width:600px){
+                    .col4{width: 100px;}
+
+                    .footer{display:flex; flex-direction: column;} /* parte do roda pé*/
+                    .footer30{width: 100px; text-align: center;padding-bottom: 50px;}
+                    .footer40{width: 100px; text-align: center; padding-bottom: 50px;}
+
+                    .footer h1{font-size: 1.5em; margin-top: 10px;}
+                    
+                }
+                
+                
